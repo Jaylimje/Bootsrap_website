@@ -1,0 +1,255 @@
+@import url('https://fonts.cdnfonts.com/css/verdana');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body{
+    font-family: 'Verdana', sans-serif;
+}
+
+header{
+    top: 0;
+    background-color: white;
+    justify-content: space-between;
+    position: sticky;
+    padding: 0px 15px ;
+    width: 100%;
+    box-shadow: 0px 1px 5px 1px rgb(134, 134, 134) ;
+    font-size: 16px;
+    z-index: 99;
+}
+
+
+header .main{
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 4px;
+    font-size: 15px;
+}
+
+.link:hover{
+    color: black;
+    background-color: rgb(195, 195, 195);
+}
+
+header .nav{
+    padding: 10px 20px;
+}
+
+a{
+    padding: 10px;
+}
+
+#home{
+    position: relative;
+    margin: 0px 10px;
+}
+
+.content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    letter-spacing: 3.5px;
+}
+
+.content h1{
+    font-weight: 100;
+    font-size: 35px;
+}
+
+.content strong{
+    padding: 13px 13px;
+    background-color: rgba(19, 19, 19, 0.8);
+}
+
+.container{
+    font-size: 20px;
+    max-width: 100%;
+    padding: 20px 20px 10px;
+}
+
+.hd{
+    font-size: 20px;
+    padding: 70px 0px 20px 0px;
+}
+
+.images{
+    display: flex;
+}
+
+.pro-img{
+    position: relative;
+    display: flex;
+    margin: 10px;
+}
+
+.text{
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 18px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0.1s;
+    height: 100%;
+}
+
+.pro-img::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(19, 19, 19, 0.3);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.pro-img:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.pro-img:hover .text{
+    opacity: 1;
+    z-index: 2;
+}
+
+.par{
+    font-size: 15px;
+    padding: 0;
+    text-align: justify;
+}
+
+.name{
+    margin:20px 0px ;
+    padding: 0px;
+}
+
+.work{
+    padding: 0;
+    margin: 20px 0px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #423d3de0;
+}
+
+.info{
+    font-size: 15px;
+    padding: 10px 0px ;
+    text-align: justify;
+}
+
+.co{
+    background-color: rgba(217, 216, 216, 0.601);
+    padding: 10px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.project{
+    font-size: 18px;
+    padding: 0px;
+    margin: 10px;
+}
+
+.box input{
+    width:100%;
+    border: 1px solid black;
+}
+
+.ab{
+    font-size: 16px;
+}
+
+button{
+    letter-spacing: 1px;
+}
+
+footer a{
+    color: #fff;
+}
+
+footer a:hover{
+    color: rgb(58, 184, 58);
+}
+
+footer p{
+    padding: 30px;
+    margin: 0px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.carousel{
+    width: 80% !important;
+    display: flex;
+    margin: auto;
+}
+
+.carousel-inner{
+    height: 550px;
+    margin-top: 80px !important;
+}
+
+.mySwiper {
+    margin: 50px;
+    overflow: hidden;
+  }
+
+@media screen and (max-width: 576px){
+    header .head{
+        top: 0;
+        position: sticky;
+    }
+    header .main{
+        padding: 0;
+    }
+    header .nav{
+        padding: 0;
+    }
+    .padd{
+        padding-top: 50px;
+    }
+
+    /* .nav .link{
+        display: flex;
+        justify-content: space-evenly;
+    } */
+
+    .carousel-inner{
+        max-height: fit-content;
+    }
+}
